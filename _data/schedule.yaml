@@ -1,0 +1,11 @@
+- name: Llegada y presentación
+  day:  1
+  time: "11:15 - 11:30"
+
+- name: Debate
+  day:  1
+  time: "11:30 - 13:00"
+
+- name: Networking / Picnic?
+  day: 1
+  time: "13:00 - ..."

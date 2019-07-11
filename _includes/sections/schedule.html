@@ -1,0 +1,21 @@
+<section id="schedule">
+  <div class="section-heading">
+    <h2>Agenda</h2>
+    <hr>
+    <table class="table lead table-hover schedule-table">
+      <thead>
+        <tr>
+          <th style="width: 180px">Hora</th>
+          <th></th>
+        </tr>
+      </thead>
+      {% assign day1 = site.data.schedule | where:"day","1" %}
+      {% for event in day1 %}
+      <tr>
+        <td>{{ event.time }}</td>
+        <td>{{ event.name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>

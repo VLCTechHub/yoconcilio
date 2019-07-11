@@ -1,0 +1,24 @@
+<section id="speakers" class="section-accent">
+  <div>
+    <h1>
+      Mentores
+    </h1>
+    <hr>
+    <div class="speakers">
+      {% for speaker in site.data.speakers %}
+      <div class="speaker">
+        <img src={{speaker.avatar}} alt={{speaker.name}} class="avatar">
+        <h3>{{speaker.name}}</h3>
+        <p class="twitter">
+          <a href="https://twitter.com/{{speaker.twitter}}" target="_blank" title={{speaker.twitter}}>
+          @{{speaker.twitter}}
+          </a>
+        <p>
+        <p class="bio">
+         {{speaker.bio}}
+        </p>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+</section>

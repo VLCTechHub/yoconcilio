@@ -1,0 +1,75 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <!-- for Google -->
+    <meta name="description" content="{{site.description}}"/>
+    <meta name="keywords" content="{{site.keywords}}"/
+    <meta name="author" content="VLCTechHub"/>
+    <meta name="theme-color" content="#fa0">
+    <meta name="copyright" content="VLCTechHub"/>
+    <meta name="application-name" content="{{site.title}}"/>
+
+    <!-- for Facebook -->
+    <meta property="og:title" content="{{site.title}}"/>
+    <meta property="og:image" content="{{site.ogimage}}"/>
+    <meta property="og:image:secure_url" content="{{site.ogimage}}">
+    <meta property="og:url" content="https://vlctechhub.org"/>
+    <meta property="og:description" content="{{site.description}}"/>
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{site.title}}"/>
+    <meta name="twitter:site" content="@vlctechhub">
+    <meta name="twitter:creator" content="@vlctechhub">
+    <meta name="twitter:description" content="{{site.description}}"/>
+    <meta name="twitter:image" content="{{site.ogimage}}"/>
+
+    <title>{%if page.title %}{{page.title}} | {%endif%}{{site.title}}</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="assets/lib/font-awesome.min.css">
+
+    <!-- Our own CSS, yay! -->
+    <link rel="stylesheet" href="assets/css/style.css?_={{ site.time |  date: '%s' }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+{{content}}
+
+{% include footer.html %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+<script>
+  var pattern = Trianglify({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    x_colors: ['#dadaeb', '#bcbddc', '#6a51a3', '#54278f']
+  });
+    document.body.appendChild(pattern.canvas())
+</script>
+
+</body>
+
+</html>

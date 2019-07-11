@@ -1,0 +1,35 @@
+<section id="faq" class="section-reverse">
+    <div>
+        <h2>FAQ <br>
+            <small>Todas las preguntas importantes. Contestadas.</small>
+        </h2>
+        <hr>
+        <div class="col-md-4 question">
+            {% for faq in site.data.faq %}
+            {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+            {% if modulo == '1' %}
+            <h3>{{faq.question}}</h3>
+            {{faq.answer | markdownify }}
+            {% endif %}
+            {%endfor%}
+        </div>
+        <div class="col-md-4 question">
+            {% for faq in site.data.faq %}
+            {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+            {% if modulo == '2' %}
+            <h3>{{faq.question}}</h3>
+            {{faq.answer | markdownify }}
+            {% endif %}
+            {%endfor%}
+        </div>
+        <div class="col-md-4 question">
+            {% for faq in site.data.faq %}
+            {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+            {% if modulo == '0' %}
+            <h3>{{faq.question}}</h3>
+            {{faq.answer | markdownify }}
+            {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+</section>
