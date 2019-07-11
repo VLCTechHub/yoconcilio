@@ -1,4 +1,4 @@
-Template to create events on VLCTechHub.
+Website del coloquio "Yo concilio, tu concilias, ella concilia"
 
 # Run project
 
@@ -6,7 +6,7 @@ Needs: Ruby
 
 ## Local
 
-1. `git clone  https://github.com/vlctechhub/event-template.git`
+1. `git clone  https://github.com/vlctechhub/yoconcilio.git`
 2. `gem install jekyll`
 3. `jekyll serve --watch`
 
